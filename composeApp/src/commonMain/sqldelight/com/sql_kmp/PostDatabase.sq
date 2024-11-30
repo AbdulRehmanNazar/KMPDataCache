@@ -1,0 +1,19 @@
+CREATE TABLE PostTable (
+    userId INTEGER NOT NULL,
+    thumbnail Text NOT NULL DEFAULT '',
+    id INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL
+);
+
+readAllPosts:
+SELECT PostTable.*
+FROM PostTable;
+
+
+insertPost:
+INSERT INTO PostTable(userId,thumbnail,id,title,body)
+VALUES (?,?,?,?,?);
+
+removeAllPosts:
+DELETE FROM PostTable;
